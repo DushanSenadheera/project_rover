@@ -1,22 +1,40 @@
-import { useState, useEffect } from "react";
-import "./Navbar.scss";
+import { Container, Group, Burger } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import classes from './navbar.module.scss';
 
-export const Navbar = () => {
-  const [isDark, setIsDark] = useState(false);
+const links = [
+  { link: '/', label: 'Home' },
+  { link: '/about', label: 'About' },
+  { link: '/plan', label: 'Travel Plan' },
+  { link: '/contact', label: 'Contact' },
+];
 
-  useEffect(() => {
-    const changeNavbarColor = () => {
-      const navbar = document.querySelector(".navbar") as HTMLElement;
-      const navbarHeight = navbar.offsetHeight;
+export function Navbar() {
+  const [opened, { toggle }] = useDisclosure(false);
 
-      setIsDark(window.scrollY > navbarHeight);
-    };
-    window.addEventListener("scroll", changeNavbarColor);
-    return () => {
-      window.removeEventListener("scroll", changeNavbarColor);
-    };
-  }, []);
+  const items = links.map((link) => (
+    <a
+      key={link.label}
+      href={link.link}
+      className={classes.link}
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+    >
+      {link.label}
+    </a>
+  ));
 
   return (
-    <nav className={`navbar ${isDark ? "dark" : ""}`}>LOGO</nav>
-  )};
+    <header className={classes.header}>
+      <Container size="md" className={classes.inner}>
+        <h1 className={classes.logo}>R O V E R</h1>
+        <Group gap={5} visibleFrom="xs">
+          {items}
+          <button>API</button>
+        </Group>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+      </Container>
+    </header>
+  );
+}

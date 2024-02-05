@@ -1,14 +1,36 @@
-import './header.scss'
+import cx from 'clsx';
+import { Title, Text, Container, Button, Overlay } from '@mantine/core';
+import classes from './header.module.scss';
 
-export const Header = () => {
-    return (
-        <header>
-            <div className="header-content">
-                <h1>R O V E R</h1>
-                <h3>Your Adventure Begins Here</h3> 
-                <br />
-                <button>GENERATE</button>
-            </div>
-        </header>
-    )
+export function Header() {
+  return (
+    <div className={classes.wrapper}>
+      <Overlay color="#000" opacity={0.8} zIndex={1} />
+
+      <div className={classes.inner}>
+        <Title className={classes.title}>
+          Automated AI code reviews for{' '}
+          <Text component="span" inherit className={classes.highlight}>
+            any stack
+          </Text>
+        </Title>
+
+        <Container size={640}>
+          <Text size="lg" className={classes.description}>
+            Build more reliable software with AI companion. AI is also trained to detect lazy
+            developers who do nothing and just complain on Twitter.
+          </Text>
+        </Container>
+
+        <div className={classes.controls}>
+          <Button className={classes.control} variant="white" size="lg">
+            Get started
+          </Button>
+          <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
+            Live demo
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
 }

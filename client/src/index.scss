@@ -11,4 +11,35 @@
 
 :root{
     --primary-color: #121212;
+    --body-font: 16px;
+    --sub-heading-font: 48px;
+    --heading-font: 84px;
+}
+
+.primary-btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: var(--body-font);
+    &:hover{
+        background-color: #fff;
+        color: var(--primary-color);
+    }
+}
+
+.secondary-btn{
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: var(--body-font);
+    &:hover{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
 }

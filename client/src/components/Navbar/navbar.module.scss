@@ -1,0 +1,34 @@
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 120px;
+  }
+  
+  .inner {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo{
+    color: #fff;
+  }
+  
+  .link {
+    display: block;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: var(--mantine-radius-sm);
+    text-decoration: none;
+    color: #fff;
+    font-size: var(--mantine-font-size-sm);
+    font-weight: 500;
+  
+    @mixin hover {
+      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    }
+  
+  }
