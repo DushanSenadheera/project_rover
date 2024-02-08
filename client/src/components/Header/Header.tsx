@@ -1,5 +1,5 @@
 import cx from 'clsx';
-import { Title, Text, Container, Button, Overlay } from '@mantine/core';
+import { Title, Button, Overlay } from '@mantine/core';
 import classes from './header.module.scss';
 
 export function Header() {
@@ -8,26 +8,15 @@ export function Header() {
       <Overlay color="#000" opacity={0.8} zIndex={1} />
 
       <div className={classes.inner}>
-        <Title className={classes.title}>
-          Automated AI code reviews for{' '}
-          <Text component="span" inherit className={classes.highlight}>
-            any stack
-          </Text>
+        <Title size={98} className={classes.title}>
+          Your Adventure <br /> begins Here
         </Title>
-
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained to detect lazy
-            developers who do nothing and just complain on Twitter.
-          </Text>
-        </Container>
-
         <div className={classes.controls}>
           <Button className={classes.control} variant="white" size="lg">
-            Get started
+            Learn More
           </Button>
           <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
-            Live demo
+            Start
           </Button>
         </div>
       </div>

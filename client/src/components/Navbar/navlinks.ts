@@ -1,18 +1,6 @@
-export const navlinks = [
-    {
-        title: "Home",
-        path: "/",
-    },
-    {
-        title: "About",
-        path: "/about",
-    },
-    {
-        title: "Travel Plan",
-        path: "/plan",
-    },
-    {
-        title: "Contact",
-        path: "/contact",
-    },
-]
+export const links = [
+    { link: '/', label: 'Home' },
+    { link: '/about', label: 'About' },
+    { link: '/plan', label: 'Travel Plan' },
+    { link: '/contact', label: 'Contact' },
+  ];

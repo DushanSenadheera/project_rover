@@ -1,6 +1,6 @@
 import { Title, SimpleGrid, Text, Button, ThemeIcon, Grid, rem } from '@mantine/core';
 import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
-import classes from './Destination.module.scss';
+import classes from './Features.module.scss';
 
 const features = [
   {
@@ -27,14 +27,14 @@ const features = [
   },
 ];
 
-export function Destination() {
+export function Features() {
   const items = features.map((feature) => (
     <div key={feature.title}>
       <ThemeIcon
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+        gradient={{ deg: 133, from: 'black', to: '#1e1e1e' }}
       >
         <feature.icon style={{ width: rem(26), height: rem(26) }} stroke={1.5} />
       </ThemeIcon>
@@ -61,7 +61,7 @@ export function Destination() {
 
           <Button
             variant="gradient"
-            gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+            gradient={{ deg: 133, from: 'black', to: '#1e1e1e' }}
             size="lg"
             radius="md"
             mt="xl"
