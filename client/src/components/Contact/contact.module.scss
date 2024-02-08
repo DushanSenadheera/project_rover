@@ -2,8 +2,7 @@
     min-height: 400px;
     background-image: linear-gradient(
       -60deg,
-      var(--mantine-color-blue-4) 0%,
-      var(--mantine-color-blue-7) 100%
+      var(--primary-color) 0%, var(--primary-color) 100%
     );
     border-radius: var(--mantine-radius-md);
     padding: calc(var(--mantine-spacing-xl) * 2.5);
@@ -14,9 +13,6 @@
   }
   
   .title {
-    font-family:
-      Greycliff CF,
-      var(--mantine-font-family);
     color: var(--mantine-color-white);
     line-height: 1;
   }
