@@ -19,7 +19,7 @@ export default function Destination() {
             placeholder="Enter your destination"
           />
         </form>
-        <Link to='/budget'><button className="next secondary-btn">Next</button></Link>
+        <Link to='/duration'><button className="next secondary-btn">Next</button></Link>
       </div>
     </div>
   );

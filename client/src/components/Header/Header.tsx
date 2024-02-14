@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import cx from 'clsx';
 import { Title, Button, Overlay } from '@mantine/core';
+import videoSource from '../../assets/bgvid.mp4';
 import classes from './header.module.scss';
 
 export function Header() {
