@@ -10,21 +10,20 @@ export default function Budget() {
       </div>
       <div className="budget-form">
         <form>
+          <h1>Budget</h1>
+          <p>Enter your budget</p>
+          <br />
           <TextInput
-            label="Budget"
             withAsterisk
-            description="Enter your minimum budget"
-            error="Please enter your minimum budget"
-            placeholder="Input placeholder"
+            placeholder="Enter your maximum budget"
           />
+          <br />
           <TextInput
-            label="Budget"
             withAsterisk
-            description="Enter your minimum budget"
-            error="Please enter your minimum budget"
-            placeholder="Input placeholder"
+            placeholder="Enter your minimum budget"
           />
         </form>
+        <button className="next secondary-btn">Next</button>
       </div>
     </div>
   );
