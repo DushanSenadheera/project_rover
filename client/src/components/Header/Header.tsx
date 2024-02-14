@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import cx from 'clsx';
 import { Title, Button, Overlay } from '@mantine/core';
 import classes from './header.module.scss';
@@ -15,9 +16,9 @@ export function Header() {
           <Button className={classes.control} variant="white" size="lg">
             Learn More
           </Button>
-          <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
+          <Link to='/destination'><Button className={cx(classes.control, classes.secondaryControl)} size="lg">
             Start
-          </Button>
+          </Button></Link>
         </div>
       </div>
     </div>
