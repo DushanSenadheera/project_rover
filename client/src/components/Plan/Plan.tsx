@@ -1,6 +1,6 @@
-import { Text, Title, TextInput, Button, Image } from '@mantine/core';
+import { Text, Title, TextInput, Button } from '@mantine/core';
+import { Link } from 'react-router-dom';
 import classes from './Plan.module.scss';
-import image from '../../assets/bg5.png';
 
 export function Plan() {
   return (
@@ -20,10 +20,9 @@ export function Plan() {
             placeholder="Your Destination"
             classNames={{ input: classes.input, root: classes.inputWrapper }}
           />
-          <Button className={classes.control}>Plan Now</Button>
+          <Link to='/destination'><Button className={classes.control}>Plan Now</Button></Link>
         </div>
       </div>
-      <Image src={image} className={classes.image} />
     </div>
   );
 }
