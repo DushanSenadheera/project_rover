@@ -1,3 +1,7 @@
+### Project ROVER - Travel Recommendation Platform
+
+[![ci](https://github.com/DushanSenadheera/project_rover/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DushanSenadheera/project_rover/actions/workflows/ci.yml)
+
 Project Rover is a Travel Recommendation Platform powered by Software as a Service recommendation Engine that can use as a contextual recommendation system  
 
 ### How to run client locally?
