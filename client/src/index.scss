@@ -11,9 +11,9 @@
 
 :root{
     --primary-color: #1e1e1e;
-    --body-font: 16px;
-    --sub-heading-font: 48px;
-    --heading-font: 84px;
+    --body-font: 12px;
+    --sub-heading: 48px;
+    --heading: 84px;
 }
 
 .primary-btn{
@@ -42,4 +42,11 @@
         background-color: var(--primary-color);
         color: #fff;
     }
+}
+
+.sub-heading{
+    font-size: var(--sub-heading);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
