@@ -38,7 +38,7 @@ export function Navbar() {
         <h1 className={classes.logo}>R O V E R</h1>
         <Group gap={5} visibleFrom="xs">
           {items}
-          <Button variant="filled" color="var(--primary-color)" size="xs" radius="lg">Documentation</Button>
+          <Button variant="filled" color="var(--primary-color)" size="sm" radius="lg">Documentation</Button>
         </Group>
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>

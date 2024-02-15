@@ -5,28 +5,28 @@ import classes from './footer.module.scss';
 
 const data = [
   {
-    title: 'About',
+    title: 'Navigation',
     links: [
-      { label: 'Features', link: '#' },
-      { label: 'Pricing', link: '#' },
-      { label: 'Support', link: '#' },
-      { label: 'Forums', link: '#' },
+      { label: 'Home', link: '#' },
+      { label: 'About', link: '#' },
+      { label: 'Travel Plan', link: '#' },
+      { label: 'Contact', link: '#' },
     ],
   },
   {
-    title: 'Project',
+    title: 'Recommendation Engine',
     links: [
-      { label: 'Contribute', link: '#' },
+      { label: 'Documentation', link: '#' },
       { label: 'Media assets', link: '#' },
       { label: 'Changelog', link: '#' },
       { label: 'Releases', link: '#' },
     ],
   },
   {
-    title: 'Community',
+    title: 'Other',
     links: [
-      { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
+      { label: 'Privacy Policy', link: '#' },
+      { label: 'Contribute', link: '#' },
       { label: 'Email newsletter', link: '#' },
       { label: 'GitHub discussions', link: '#' },
     ],
@@ -60,15 +60,16 @@ export function Footer() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           {/* <MantineLogo size={30} /> */}
-          <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+          <Text size="lg" c="dimmed" className={classes.description}>
+            R O V E R
           </Text>
+          <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem tempore dolor aspernatur minus ipsa?</small>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2024 Designed & Developed By Dushan Senadheera. All rights reserved.
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
