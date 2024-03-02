@@ -15,13 +15,17 @@ export default function Budget() {
           <p>Enter your budget</p>
           <br />
           <TextInput
+            label="Minimum Budget"
             withAsterisk
-            placeholder="Enter your maximum budget"
+            placeholder="USD"
+            type="number"
           />
           <br />
           <TextInput
+            label="Maximum Budget"
             withAsterisk
-            placeholder="Enter your minimum budget"
+            placeholder="USD"
+            type="number"
           />
         </form>
         <Link to='/interests'><button className="next secondary-btn">Next</button></Link>
