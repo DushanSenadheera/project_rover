@@ -12,11 +12,13 @@ export default function Duration() {
       <div className="duration-form">
         <form>
           <h1>duration</h1>
-          <p>Enter your duration</p>
+          <p>Enter your travel duration</p>
           <br />
             <NumberInput
+              label="Travel Duration"
               withAsterisk
-              placeholder="duration"
+              placeholder="Days"
+              min={1}
             />
         </form>
         <Link to='/budget'><button className="next secondary-btn">Next</button></Link>

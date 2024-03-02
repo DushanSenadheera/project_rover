@@ -12,7 +12,7 @@ export default function interests() {
       <div className="interests-form">
         <form>
           <h1>interests</h1>
-          <p>Enter your interests</p>
+          <p>Select your interests</p>
           <br />
           <div className="chips">
             <Chip color="gray">Religous Places</Chip>
