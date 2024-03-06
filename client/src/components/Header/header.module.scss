@@ -50,11 +50,13 @@
   }
   
   .controls {
-    margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    padding-left: var(--mantine-spacing-md);
-    padding-right: var(--mantine-spacing-md);
+
+    button{
+      margin: 0 6px;
+    }
   
     @media (max-width: 36em) {
       flex-direction: column;

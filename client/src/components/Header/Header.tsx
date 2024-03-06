@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom';
-import cx from 'clsx';
 import { Title, Button, Overlay } from '@mantine/core';
-//import videoSource from '../../assets/bgvid.mp4';
 import classes from './header.module.scss';
 
 export function Header() {
@@ -14,10 +12,10 @@ export function Header() {
           Your Adventure <br /> Begins Here
         </Title>
         <div className={classes.controls}>
-          <Button className='secondary-btn' variant="white" size="lg">
+          <Button variant="light" color="rgba(255, 255, 255, 1)" radius="md">
             Learn More
           </Button>
-          <Link to='/destination'><Button className={cx(classes.control, classes.secondaryControl)} size="lg">
+          <Link to='/destination'><Button variant="light" color="rgba(255, 255, 255, 1)" radius="md">
             Start
           </Button></Link>
         </div>

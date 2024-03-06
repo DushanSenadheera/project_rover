@@ -15,13 +15,13 @@ export default function interests() {
           <p>Select your interests</p>
           <br />
           <div className="chips">
-            <Chip color="gray">Religous Places</Chip>
-            <Chip color="gray">Must See Attractions</Chip>
-            <Chip color="gray">Historical</Chip>
-            <Chip color="gray">Hidden Gems</Chip>
-            <Chip color="gray">Beaches</Chip>
-            <Chip color="gray">Tasty Foods</Chip>
-            <Chip color="gray">Viewpoints</Chip>
+            <Chip color="black">Religous Places</Chip>
+            <Chip color="black">Must See Attractions</Chip>
+            <Chip color="black">Historical</Chip>
+            <Chip color="black">Hidden Gems</Chip>
+            <Chip color="black">Beaches</Chip>
+            <Chip color="black">Tasty Foods</Chip>
+            <Chip color="black">Viewpoints</Chip>
           </div>
         </form>
         <Link to='/results'><button className="next secondary-btn">Next</button></Link>
