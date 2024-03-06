@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
@@ -10,6 +10,7 @@ import Results from "./pages/Results/Results";
 import NoPage from "./pages/NoPage/NoPage";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Navbar />
