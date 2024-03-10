@@ -3,8 +3,8 @@
     padding-bottom: calc(var(--mantine-spacing-xl) * 2);
     background-color: var(--primary-color);
     -webkit-box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
--moz-box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
-box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
+    box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
   }
   
   .logo {
@@ -51,7 +51,7 @@ box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
   
   .link {
     display: block;
-    color: var(--mantine-color-gray-6);
+    color: #fff;
     font-size: var(--mantine-font-size-sm);
     padding-top: 3px;
     padding-bottom: 3px;
@@ -64,11 +64,8 @@ box-shadow: -1px -6px 26px 0px rgba(0,0,0,0.67);
   .title {
     font-size: var(--mantine-font-size-lg);
     font-weight: 700;
-    font-family:
-      Greycliff CF,
-      var(--mantine-font-family);
     margin-bottom: calc(var(--mantine-spacing-xs) / 2);
-    color: var(--mantine-color-black);
+    color: #fff;
   }
   
   .afterFooter {

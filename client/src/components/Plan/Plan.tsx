@@ -6,11 +6,8 @@ export function Plan() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Title className={classes.title}>Travel Plan</Title>
-        <Text fw={500} fz="lg" mb={5}>
-          Plan your trip now in a minute!
-        </Text>
-        <Text fz="sm" c="dimmed">
+        <Title className={classes.title}>Plan your trip now in a minute!</Title>
+        <Text fz="sm">
           You will never miss important product updates, latest news and community QA sessions. Our
           newsletter is once a week, every Sunday.
         </Text>

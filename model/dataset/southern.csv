@@ -1,11 +1,11 @@
-Title,Review,Rating,Category,About,Location,Duration,Budget
-Galle Fort,3516,4.5,point of interest,,Galle,3,
-Bentota Beach,2305,4.5,beaches,,Bentota,1,
-Old Town of Galle and its Fortifications,3511,4.5,point of interests,,Galle,1,
-Mirissa Beach,3095,4.5,beaches,,Mirissa,1,
-Sea Turtle Farm Galle Mahamodara,1076,4.5,nature & wildlife,,Galle,2,
-Hikkaduwa Beach,2383,4,beaches,,Hikkaduwa,3,
-Bundala National Park,595,4.5,nature & wildlife,,Weligatta,4,
-Kalametiya Lagoon Bird Sanctuary & Wetland Park,380,5,nature & wildlife,,Tangalle,3,
-Sinharaja Forest Reserve,612,4.5,nature & wildlife,,Deniyaya,4,
-Jungle Beach,2824,3.5,beaches,,Unawatuna,1,
+Title,Reviews,Rating,Category,Location,Duration,Budget
+Galle Fort,3516,4.5,point of interests,Galle,3,0
+Bentota Beach,2305,4.5,beaches,Bentota,1,0
+Old Town of Galle and its Fortifications,3511,4.5,point of interests,Galle,1,0
+Mirissa Beach,3095,4.5,beaches,Mirissa,1,0
+Sea Turtle Farm Galle Mahamodara,1076,4.5,nature & wildlife,Galle,2,30
+Hikkaduwa Beach,2383,4,beaches,Hikkaduwa,3,0
+Bundala National Park,595,4.5,nature & wildlife,Weligatta,4,40
+Kalametiya Lagoon Bird Sanctuary & Wetland Park,380,5,nature & wildlife,Tangalle,3,30
+Sinharaja Forest Reserve,612,4.5,nature & wildlife,Deniyaya,4,30
+Jungle Beach,2824,3.5,beaches,Unawatuna,1,0
