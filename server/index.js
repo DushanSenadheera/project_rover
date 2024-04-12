@@ -1,30 +1,20 @@
+require('dotenv').config();
+import config from './config';
+
 const express = require('express')
-const { spawn } = require('child_process');
 const app = express()
-const port = 3000
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const userInputs = require('./routes/userInputs');
 
-app.get('/', (req, res) => {
+app.use(cors({origin: '*',}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-    const fnum = 4;
-    const snum = 7;
+app.use('/api/rover', userInputs); 
 
-    let dataToSend;
-    // spawn new child process to call the python script
-    const python = spawn('python', ['script.py', fnum, snum]);
-    // collect data from script
-    python.stdout.on('data', function (data) {
-        console.log('Pipe data from python script ...');
-        dataToSend = JSON.parse(data.toString());
-    });
-    // in close event we are sure that stream from child process is closed
-    python.on('close', (code) => {
-        console.log(`child process close all stdio with code ${code}`);
-        // send data to browser
-        res.send(dataToSend.test)
-    });
+config.connectToDB()
 
-})
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`)
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening on port ${process.env.PORT}!`)
 })
