@@ -9,6 +9,7 @@
   
   .logo {
     max-width: 200px;
+    color: #fff;
   
     @media (max-width: 48em) {
       display: flex;
@@ -51,14 +52,9 @@
   
   .link {
     display: block;
-    color: #fff;
     font-size: var(--mantine-font-size-sm);
     padding-top: 3px;
     padding-bottom: 3px;
-  
-    &:hover {
-      text-decoration: underline;
-    }
   }
   
   .title {

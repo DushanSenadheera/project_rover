@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import { Title, Button, Overlay } from '@mantine/core';
 import classes from './header.module.scss';
+import { Fade } from "react-awesome-reveal";
 
 export function Header() {
   return (
@@ -8,16 +9,15 @@ export function Header() {
       <Overlay color="#000" opacity={0.8} zIndex={1} />
 
       <div className={classes.inner}>
-        <Title size={98} lh={1} className={classes.title}>
+      <Fade direction='down'><Title size={98} lh={1} className={classes.title}>
           Your Adventure <br /> Begins Here
-        </Title>
+        </Title></Fade>
         <div className={classes.controls}>
-          <Button variant="light" color="rgba(255, 255, 255, 1)" radius="md">
-            Learn More
-          </Button>
+          <Fade direction='up'>
           <Link to='/destination'><Button variant="light" color="rgba(255, 255, 255, 1)" radius="md">
-            Start
+            Start Now
           </Button></Link>
+          </Fade>
         </div>
       </div>
     </div>

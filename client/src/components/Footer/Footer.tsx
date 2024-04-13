@@ -14,15 +14,6 @@ const data = [
     ],
   },
   {
-    title: 'Recommendation Engine',
-    links: [
-      { label: 'Documentation', link: '#' },
-      { label: 'Media assets', link: '#' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
-    ],
-  },
-  {
     title: 'Other',
     links: [
       { label: 'Privacy Policy', link: '#' },
@@ -41,6 +32,7 @@ export function Footer() {
         className={classes.link}
         component="a"
         href={link.link}
+        c={'grey'}
         onClick={(event) => event.preventDefault()}
       >
         {link.label}
@@ -49,7 +41,7 @@ export function Footer() {
 
     return (
       <div className={classes.wrapper} key={group.title}>
-        <Text className={classes.title}>{group.title}</Text>
+        <Text c={'white'} className={classes.title}>{group.title}</Text>
         {links}
       </div>
     );
@@ -60,7 +52,7 @@ export function Footer() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           {/* <MantineLogo size={30} /> */}
-          <Text size="lg" c="dimmed" className={classes.description}>
+          <Text size="lg" c='white' className={classes.description}>
             R O V E R
           </Text>
           <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem tempore dolor aspernatur minus ipsa?</small>
