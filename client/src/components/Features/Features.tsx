@@ -1,6 +1,7 @@
 import { Title, SimpleGrid, Text, Button, ThemeIcon, Grid, rem } from '@mantine/core';
 import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
 import classes from './Features.module.scss';
+import { Flip } from 'react-awesome-reveal';
 
 const features = [
   {
@@ -29,7 +30,8 @@ const features = [
 
 export function Features() {
   const items = features.map((feature) => (
-    <div key={feature.title}>
+    <Flip direction='horizontal'>
+      <div key={feature.title}>
       <ThemeIcon
         size={44}
         radius="md"
@@ -45,6 +47,7 @@ export function Features() {
         {feature.description}
       </Text>
     </div>
+    </Flip>
   ));
 
   return (

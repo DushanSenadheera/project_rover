@@ -7,7 +7,7 @@ export function Plan() {
     <div className={classes.wrapper}>
       <div className={classes.body}>
         <Title className={classes.title}>Plan your trip now in a minute!</Title>
-        <Text fz="sm">
+        <Text c={'white'} fz="sm">
           You will never miss important product updates, latest news and community QA sessions. Our
           newsletter is once a week, every Sunday.
         </Text>

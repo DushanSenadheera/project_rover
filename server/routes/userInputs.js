@@ -4,10 +4,8 @@ const router = express.Router();
 
 router.post('/api/rover/', (req, res) => {
 
-    const {
-        fnum,
-        snum
-    } = req.body;
+    const fnum = req.body.fnum;
+    const snum = req.body.snum;
 
     let dataToSend;
     // spawn new child process to call the python script
@@ -24,3 +22,5 @@ router.post('/api/rover/', (req, res) => {
         res.send(dataToSend.test)
     });
 })
+
+module.exports = router;
