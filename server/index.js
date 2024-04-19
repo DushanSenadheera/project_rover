@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const connectToDB = require('./config.js');
 const express = require('express')
+
 const app = express()
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -11,9 +12,11 @@ app.use(cors({origin: '*',}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/', userInputs); 
+app.use('/', userInputs);
 
-connectToDB()
+//connectToDB()
+
+
 
 app.listen(process.env.PORT, () => {
     console.log(`app is listening on port ${process.env.PORT}!`)
