@@ -2,7 +2,7 @@ const express = require('express');
 const { spawn } = require('child_process');
 const router = express.Router();
 
-router.get('/api/rover/', (req, res) => {
+router.get('/api/food/', (req, res) => {
 
     // const {location, catergory, duration, budget} = req.body;
     // const data = {
@@ -14,7 +14,7 @@ router.get('/api/rover/', (req, res) => {
 
     let dataToSend;
     // spawn new child process to call the python script
-    const python = spawn('python', ['../model/src/main.py']);
+    const python = spawn('python', ['../model/src/eat.py']);
     // collect data from script
     python.stdout.on('data', function (data) {
         console.log('Pipe data from python script ...');
