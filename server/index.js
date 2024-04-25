@@ -17,7 +17,7 @@ app.use('/', stayRoute)
 app.use('/', locationRoute)
 
 app.listen(process.env.PORT, () => {
-    console.log(`app is listening on port ${process.env.PORT}!`)
+    console.log(`server is listening on port ${process.env.PORT}!`)
 })
 
 module.exports = app;
