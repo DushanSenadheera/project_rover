@@ -6,17 +6,17 @@ import { Flip } from 'react-awesome-reveal';
 const features = [
   {
     icon: IconReceiptOff,
-    title: 'Free and open source',
+    title: 'Ease of use',
     description: 'All packages are published under MIT license, you can use Mantine in any project',
   },
   {
     icon: IconFileCode,
-    title: 'TypeScript based',
+    title: 'Scalable',
     description: 'Build type safe applications, all components and hooks export types',
   },
   {
     icon: IconCircleDotted,
-    title: 'No annoying focus ring',
+    title: 'Opensource',
     description:
       'With new :focus-visible selector focus ring will appear only when user navigates with keyboard',
   },
@@ -55,11 +55,10 @@ export function Features() {
       <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Title className={classes.title} order={2}>
-            A fully featured React components library for your next project
+            A fully featured travel recommendation engine for your next project
           </Title>
           <Text c="dimmed">
-            Build fully functional accessible web applications faster than ever – Mantine includes
-            more than 120 customizable components and hooks to cover you in any situation
+            Build fully functional travel and tourism web applications using ROVER API easily and enhance user experience
           </Text>
 
           <Button

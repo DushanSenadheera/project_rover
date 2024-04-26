@@ -9,6 +9,18 @@
 
 ### How to run application locally?
 
+clone the repositary
+```bash
+git clone []
+```
+Navigate to the project directory
+```bash
+cd project_rover
+```
+Install the dependencies
+```bash
+npm install
+```
 ```bash
 ./localhost.sh
 ```
