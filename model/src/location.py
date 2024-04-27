@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from math import radians, cos, sin, asin, sqrt
 
-# Assuming df is your DataFrame and it has been defined and loaded with data
+# Assuming df is DataFrame and it has been defined and loaded with data
 df = pd.read_csv('../model/data/southern.csv')
 
 # Combine the 'Location', 'Category', 'Budget', and 'Duration' columns into a single 'Features' column
