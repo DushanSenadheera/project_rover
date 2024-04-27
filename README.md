@@ -11,7 +11,7 @@
 
 clone the repositary
 ```bash
-git clone []
+git clone https://github.com/DushanSenadheera/project_rover.git
 ```
 Navigate to the project directory
 ```bash
@@ -21,6 +21,7 @@ Install the dependencies
 ```bash
 npm install
 ```
+Run the application
 ```bash
 ./localhost.sh
 ```
@@ -28,3 +29,6 @@ npm install
 
 ```bash
 ./dockerComposer.sh
+```
+### ROVER API Documentation
+[ROVER API Documentation](https://documenter.getpostman.com/view/28662859/2sA3BoaBaB#intro)
