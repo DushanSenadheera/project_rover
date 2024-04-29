@@ -29,7 +29,7 @@ def recommend_locations_based_on_features(index, cosine_sim=cosine_sim):
     return recommended_locations
 
 # Get user input
-user_input_location = "Weligama"
+user_input_location = sys.argv[1]
 
 # Find the index of the location that matches the user's input
 location_index = df.loc[(df['Location'] == user_input_location)].index[0]

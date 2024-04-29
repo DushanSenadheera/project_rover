@@ -1,9 +1,17 @@
+import { useState } from "react";
 import "./Duration.scss";
 import { Link } from "react-router-dom";
 import { NumberInput } from "@mantine/core";
 import bg3 from "../../assets/bg3.png";
 
 export default function Duration() {
+
+  const [Duration, setDuration] = useState(1);
+  const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDuration(Number(e.target.value));
+  }
+  console.log(Duration)
+
   return (
     <div className="duration">
       <div className="duration-img">
@@ -15,6 +23,8 @@ export default function Duration() {
           <p>Enter your travel duration</p>
           <br />
             <NumberInput
+              onChange={handleData}
+              value={Duration}
               label="Travel Duration"
               withAsterisk
               placeholder="Days"

@@ -4,17 +4,11 @@ const router = express.Router();
 
 router.get('/api/food/', (req, res) => {
 
-    // const {location, catergory, duration, budget} = req.body;
-    // const data = {
-    //     "location": location,
-    //     "catergory": catergory,
-    //     "duration": duration,
-    //     "budget": budget
-    // };
+    const location = "Tangalle"
 
     let dataToSend;
     // spawn new child process to call the python script
-    const python = spawn('python', ['../model/src/eat.py']);
+    const python = spawn('python', ['../model/src/eat.py', location]);
     // collect data from script
     python.stdout.on('data', function (data) {
         console.log('Pipe data from python script ...');
