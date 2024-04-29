@@ -86,10 +86,10 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
     return recommended_locations_per_day
 
 # Get user input
-user_input_location = "Tangalle"
-user_input_category = ["point of interests", "beaches", "nature & wildlife"]
-user_input_budget = 1000
-user_input_days = 3  # Number of days
+user_input_location = sys.argv[1]
+user_input_category = sys.argv[2] # List of categories
+user_input_budget = sys.argv[3]  # Budget in dollars
+user_input_days = sys.argv[4]  # Number of days
 
 # Recommend locations based on the user's input
 recommendations = recommend_locations(user_input_location, user_input_category, user_input_budget, user_input_days)
