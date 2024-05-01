@@ -2,16 +2,16 @@ const express = require('express');
 const { spawn } = require('child_process');
 const router = express.Router();
 
-router.get('/api/location/', (req, res) => {
+router.post('/api/location/', (req, res) => {
 
-    const location = "Tangalle"
-    const budget = "1000"
-    const duration = "3"
-    const catergories = "beaches"
+    const location = req.body.location
+    const budget = req.body.budget
+    const duration = req.body.duration
+    const catergories = req.body.interests
 
     let dataToSend;
     // spawn new child process to call the python script
-    const python = spawn('python', ['../model/src/location.py'], [location, catergories, budget, duration]);
+    const python = spawn('python', ['../model/src/location.py', location, budget, duration, catergories]);
     // collect data from script
     python.stdout.on('data', function (data) {
         console.log('Pipe data from python script ...');

@@ -87,9 +87,9 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
 
 # Get user input
 user_input_location = sys.argv[1]
-user_input_category = sys.argv[2] # List of categories
-user_input_budget = sys.argv[3]  # Budget in dollars
-user_input_days = sys.argv[4]  # Number of days
+user_input_category =  sys.argv[4] # List of categories
+user_input_budget = int(sys.argv[2])  # Budget in dollars
+user_input_days = int(sys.argv[3]) # Number of days
 
 # Recommend locations based on the user's input
 recommendations = recommend_locations(user_input_location, user_input_category, user_input_budget, user_input_days)
@@ -98,10 +98,10 @@ recommendations_list = []
 for i, day in enumerate(recommendations):
     recommendations_list.append({
         "Day": i + 1,
-        "Locations": day.to_dict('records')
+        "Locations": day.to_dict('records'),
         })
 
 # Print the list as a JSON array
-print(json.dumps(recommendations_list))
+print(json.dumps(recommendations_list,))
 
 

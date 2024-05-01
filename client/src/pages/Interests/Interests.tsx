@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Interests.scss";
 import { Link } from "react-router-dom";
 import { Chip  } from "@mantine/core";
 import bg4 from "../../assets/bg4.png";
 
-export default function interests() {
+export default function Interests() {
   
   const [selectedInterests, setSelectedInterests] = useState([]);
 
@@ -12,6 +13,10 @@ export default function interests() {
     setSelectedInterests([...selectedInterests, interest]);
   };
   console.log(selectedInterests)
+
+  const location = useLocation();
+  const budget = location.search;
+
   return (
     <div className="interests">
       <div className="interests-img">
@@ -32,7 +37,10 @@ export default function interests() {
             <Chip onClick={() => handleChipClick("Viewpoints")} color="black">Viewpoints</Chip>
           </div>
         </form>
-        <Link to='/results'><button className="next secondary-btn">Next</button></Link>
+        <Link to={{
+            pathname: "/results",
+            search: `${budget}&interests=${selectedInterests}`
+        }}><button className="next secondary-btn">Next</button></Link>
       </div>
     </div>
   );

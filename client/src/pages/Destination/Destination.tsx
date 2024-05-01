@@ -11,14 +11,17 @@ export default function Destination() {
   const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDestination(e.target.value);
   }
- 
+
   return (
     <UserInputLayout bg={bg}>
       <form>
         <h1>Destination</h1>
         <TextInput onChange={handleData} label="Enter your destination" value={destination} withAsterisk placeholder="City Name" />
       </form>
-      <Link to="/duration">
+      <Link to={{
+        pathname: "/duration",
+        search: `?destination=${destination}`
+      }}>
         <button className="next secondary-btn">Next</button>
       </Link>
     </UserInputLayout>
