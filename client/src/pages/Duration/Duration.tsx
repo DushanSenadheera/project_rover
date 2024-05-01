@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Duration.scss";
 import { Link } from "react-router-dom";
 import { NumberInput } from "@mantine/core";
@@ -10,8 +11,11 @@ export default function Duration() {
   const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDuration(Number(e.target.value));
   }
-  console.log(Duration)
 
+  const location = useLocation();
+  const destination = location.search;
+  
+  
   return (
     <div className="duration">
       <div className="duration-img">
@@ -31,7 +35,10 @@ export default function Duration() {
               min={1}
             />
         </form>
-        <Link to='/budget'><button className="next secondary-btn">Next</button></Link>
+        <Link to={{
+            pathname: "/budget",
+            search: `${destination}&duration=${Duration}`
+        }}><button className="next secondary-btn">Next</button></Link>
       </div>
     </div>
   );

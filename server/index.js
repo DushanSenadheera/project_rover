@@ -10,6 +10,7 @@ const locationRoute = require('./routes/locationRoute.js');
 
 app.use(cors({origin: '*',}));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/', foodRoute)

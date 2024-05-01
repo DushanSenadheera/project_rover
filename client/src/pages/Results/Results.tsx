@@ -1,4 +1,6 @@
 import "./Results.scss";
+import queryString from "query-string";
+import { useLocation } from "react-router-dom";
 import { Accordion } from "@mantine/core";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -27,6 +29,9 @@ const groceries = [
   },
 ];
 
+
+
+
 export default function Results() {
   const items = groceries.map((item) => (
     <Accordion.Item key={item.value} value={item.value}>
@@ -43,12 +48,18 @@ export default function Results() {
   ));
   const [loading, setLoading] = useState(true);
 
+  
+
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/location")
+      .post("http://localhost:8000/api/location", {
+        location: result.destination,
+        budget: result.budget,
+        duration: result.duration,
+        interests: result.interests,
+      })
       .then(function (res) {
-        const locations = res.data.location;
-        console.log(locations);
+        console.log(res.data);
         setLoading(false);
       })
       .catch(function (error) {
@@ -56,6 +67,10 @@ export default function Results() {
         setLoading(false);
       });
   }, []);
+
+  const location = useLocation();
+const result  = queryString.parse(location.search);
+  console.log(result)
 
   if (loading) {
     return <Loading />;

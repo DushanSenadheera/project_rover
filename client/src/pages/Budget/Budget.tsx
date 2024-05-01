@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./budget.scss";
 import { Link } from "react-router-dom";
 import { TextInput } from "@mantine/core";
@@ -10,6 +11,10 @@ export default function Budget() {
   const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBudget(Number(e.target.value));
   }
+
+  const location = useLocation();
+  const duration = location.search;
+
   return (
     <div className="budget">
       <div className="budget-img">
@@ -29,7 +34,10 @@ export default function Budget() {
             type="number"
           />
         </form>
-        <Link to='/interests'><button className="next secondary-btn">Next</button></Link>
+        <Link to={{
+            pathname: "/interests",
+            search: `${duration}&budget=${budget}`
+        }}><button className="next secondary-btn">Next</button></Link>
       </div>
     </div>
   );
