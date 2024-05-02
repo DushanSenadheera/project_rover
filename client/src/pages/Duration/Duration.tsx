@@ -2,14 +2,14 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Duration.scss";
 import { Link } from "react-router-dom";
-import { NumberInput } from "@mantine/core";
+import { TextInput } from "@mantine/core";
 import bg3 from "../../assets/bg3.png";
 
 export default function Duration() {
 
   const [Duration, setDuration] = useState(1);
-  const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDuration(Number(e.target.value));
+  const handleData = (e) => {
+    setDuration(e.target.value);
   }
 
   const location = useLocation();
@@ -26,13 +26,11 @@ export default function Duration() {
           <h1>duration</h1>
           <p>Enter your travel duration</p>
           <br />
-            <NumberInput
+            <TextInput
               onChange={handleData}
-              value={Duration}
               label="Travel Duration"
               withAsterisk
               placeholder="Days"
-              min={1}
             />
         </form>
         <Link to={{

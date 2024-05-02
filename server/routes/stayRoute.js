@@ -2,9 +2,9 @@ const express = require('express');
 const { spawn } = require('child_process');
 const router = express.Router();
 
-router.get('/api/stay/', (req, res) => {
+router.post('/api/stay/', (req, res) => {
 
-    const location = "Tangalle"
+    const location = req.body.location
 
     let dataToSend;
     // spawn new child process to call the python script

@@ -29,11 +29,11 @@ export default function Interests() {
           <br />
           <div className="chips">
             <Chip onClick={() => handleChipClick("Religous Places")} color="black">Religous Places</Chip>
-            <Chip onClick={() => handleChipClick("Must See Attractions")} color="black">Must See Attractions</Chip>
+            <Chip onClick={() => handleChipClick("point of interests")} color="black">Point of interests</Chip>
             <Chip onClick={() => handleChipClick("Historical")} color="black">Historical</Chip>
             <Chip onClick={() => handleChipClick("Hidden Gems")} color="black">Hidden Gems</Chip>
-            <Chip onClick={() => handleChipClick("Beaches")} color="black">Beaches</Chip>
-            <Chip onClick={() => handleChipClick("Tasty Foods")} color="black">Tasty Foods</Chip>
+            <Chip onClick={() => handleChipClick("beaches")} color="black">Beaches</Chip>
+            <Chip onClick={() => handleChipClick("nature & wildlife")} color="black">Nature & Wildlife</Chip>
             <Chip onClick={() => handleChipClick("Viewpoints")} color="black">Viewpoints</Chip>
           </div>
         </form>
