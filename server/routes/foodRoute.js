@@ -2,7 +2,7 @@ const express = require('express');
 const { spawn } = require('child_process');
 const router = express.Router();
 
-router.get('/api/food/', (req, res) => {
+router.post('/api/food/', (req, res) => {
 
     const location = "Tangalle"
 
