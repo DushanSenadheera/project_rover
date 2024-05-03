@@ -7,6 +7,7 @@ import axios from "axios";
 import Loading from "../../components/Loading/Loading";
 import Cards from "../../components/Card/Cards";
 import CarouselContent from "../../components/Carousel/CarouselContent";
+import Eat from "../../components/Eat/Eat";
 
 export default function Results() {
   const [loading, setLoading] = useState(true);
@@ -42,9 +43,10 @@ export default function Results() {
     return (
       <div>
         <div className="results-content">
-          <h1>Galle</h1>
+          <h1>{result.destination}</h1>
           <small>Southern Province, Sri Lanka</small>
           <div className="plan">
+            <br />
             <h1>Travel Plan</h1>
             <Accordion defaultValue="Apples">
               {
@@ -66,18 +68,18 @@ export default function Results() {
               }
             </Accordion>
           </div>
+          <br />
           <div className="stay">
             <h1>Stay</h1>
             <div className="stay-content">
-              <Cards location={result.destination} />
+              <Cards location={result.destination}/>
             </div>
           </div>
+          <br />
           <div className="stay">
             <h1>Eat</h1>
             <div className="stay-content">
-              {/* <Cards />
-              <Cards />
-              <Cards /> */}
+              <Eat location={result.destination} />
             </div>
           </div>
         </div>

@@ -62,6 +62,9 @@ export function Features() {
           </Text>
 
           <Button
+            component="a"
+            href="https://documenter.getpostman.com/view/28662859/2sA3BoaBaB#intro"
+            target="_blank"
             variant="gradient"
             gradient={{ deg: 133, from: 'black', to: '#1e1e1e' }}
             size="lg"

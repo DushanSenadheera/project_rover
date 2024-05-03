@@ -26,7 +26,7 @@ def haversine(lon1, lat1, lon2, lat2):
 
 # Function to recommend locations based on similarity score
 def recommend_locations(user_input_location, user_input_categories, user_input_budget, user_input_days):
-    user_input_duration = user_input_days * 8  # Calculate total duration based on number of days
+    user_input_duration = user_input_days * 6  # Calculate total duration based on number of days
 
     # Create a new dataframe to store the user's input
     user_df = pd.DataFrame([[user_input_location, ' '.join(user_input_categories), user_input_budget, user_input_duration]], columns=['Location', 'Category', 'Budget', 'Duration'])
@@ -44,7 +44,7 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
     location_indices = [i[0] for i in sim_scores if df.iloc[i[0]]['Duration'] <= user_input_duration and df.iloc[i[0]]['Location'] == user_input_location and any(category in df.iloc[i[0]]['Category'] for category in user_input_categories) and df.iloc[i[0]]['Budget'] <= user_input_budget]
     
     # If there are not enough locations in the input location, get other locations
-    if len(location_indices) < user_input_duration / 8:
+    if len(location_indices) < user_input_duration / 6:
         remaining_duration = user_input_duration - sum(df.iloc[i]['Duration'] for i in location_indices)
         other_location_indices = [i[0] for i in sim_scores if df.iloc[i[0]]['Duration'] <= remaining_duration and df.iloc[i[0]]['Location'] != user_input_location and any(category in df.iloc[i[0]]['Category'] for category in user_input_categories) and df.iloc[i[0]]['Budget'] <= user_input_budget]
         for index in other_location_indices:
@@ -64,13 +64,13 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
     # Sort the locations by distance
     location_indices = sorted(location_indices, key=lambda x: df.iloc[x]['Distance'])
 
-    # Split locations into days based on a maximum of 8 hours per day
+    # Split locations into days based on a maximum of 6 hours per day
     recommended_locations_per_day = []
     current_day_duration = 0
     current_day_locations = []
     for index in location_indices:
         location_duration = df.iloc[index]['Duration']
-        if current_day_duration + location_duration > 8:
+        if current_day_duration + location_duration > 6:
             if current_day_locations:
                 recommended_locations_per_day.append(df.iloc[current_day_locations])
             current_day_duration = location_duration
