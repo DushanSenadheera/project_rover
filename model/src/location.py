@@ -83,6 +83,7 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
     if current_day_locations and len(recommended_locations_per_day) < user_input_days:
         recommended_locations_per_day.append(df.iloc[current_day_locations])
 
+    
     return recommended_locations_per_day
 
 # Get user input

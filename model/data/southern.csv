@@ -1,11 +1,11 @@
-Title,Reviews,Rating,Category,Location,Duration,Budget,lati,long
-Galle Fort,3516,4.5,point of interests,Galle,3,0,6.0329,80.2168
-Bentota Beach,2305,4.5,beaches,Bentota,1,0,6.4189,80.006
-Old Town of Galle and its Fortifications,3511,4.5,point of interests,Galle,1,0,6.0329,80.2168
-Mirissa Beach,3095,4.5,beaches,Mirissa,1,0,5.9483,80.4716
-Sea Turtle Farm Galle Mahamodara,1076,4.5,nature & wildlife,Galle,2,30,6.0329,80.2168
-Hikkaduwa Beach,2383,4,beaches,Hikkaduwa,3,0,6.1395,80.1063
-Bundala National Park,595,4.5,nature & wildlife,Weligatta,4,40,6.1969,81.2409
-Kalametiya Lagoon Bird Sanctuary & Wetland Park,380,5,nature & wildlife,Tangalle,3,30,6.0243,80.7941
-Sinharaja Forest Reserve,612,4.5,nature & wildlife,Deniyaya,4,30,6.3425,80.5597
-Jungle Beach,2824,3.5,beaches,Unawatuna,1,0,6.0174,80.2489
+Title,Reviews,Rating,Category,Location,Duration,Budget,lati,long,img1,img2,img3,Description
+Galle Fort,3516,4.5,point of interests,Galle,3,0,6.0329,80.2168,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/24/05/e0/galle-fort.jpg?w=1100&h=-1&s=1,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/12/b8/2d/galle.jpg?w=1200&h=-1&s=1,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/07/e0/41/the-fantastic-place-you.jpg?w=800&h=-1&s=1,"Galle, in southern Sri Lanka, boasts a rich history marked by Dutch influence evident in its World Heritage Site, the Dutch Fort. This strategic emporium of foreign trade has ancient roots, possibly dating back to biblical times as the city of Tarshish. Legend has it that the town derived its name from a Portuguese fleet's accidental encounter, inspired by the crowing of a cock ('Galo' in Portuguese), or possibly from the abundance of rocks ('Gala' in Sinhala) in its harbor."
+Bentota Beach,2305,4.5,beaches,Bentota,1,0,6.4189,80.006,,,,
+Old Town of Galle and its Fortifications,3511,4.5,point of interests,Galle,1,0,6.0329,80.2168,sad,adsad,asdasd,dsadsad
+Mirissa Beach,3095,4.5,beaches,Mirissa,1,0,5.9483,80.4716,,,,
+Sea Turtle Farm Galle Mahamodara,1076,4.5,nature & wildlife,Galle,2,30,6.0329,80.2168,sadasd,sadasd,sadsad,asdsadsad
+Hikkaduwa Beach,2383,4,beaches,Hikkaduwa,3,0,6.1395,80.1063,,,,
+Bundala National Park,595,4.5,nature & wildlife,Weligatta,4,40,6.1969,81.2409,,,,
+Kalametiya Lagoon Bird Sanctuary & Wetland Park,380,5,nature & wildlife,Tangalle,3,30,6.0243,80.7941,,,,
+Sinharaja Forest Reserve,612,4.5,nature & wildlife,Deniyaya,4,30,6.3425,80.5597,,,,
+Jungle Beach,2824,3.5,beaches,Unawatuna,1,0,6.0174,80.2489,,,,

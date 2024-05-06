@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "../../components/Loading/Loading";
 import Cards from "../../components/Card/Cards";
-import CarouselContent from "../../components/Carousel/CarouselContent";
+import { Carousel } from "@mantine/carousel";
 import Eat from "../../components/Eat/Eat";
 
 export default function Results() {
@@ -35,8 +35,6 @@ export default function Results() {
       });
   }, []);
 
-  
-
   if (loading) {
     return <Loading />;
   } else {
@@ -49,30 +47,40 @@ export default function Results() {
             <br />
             <h1>Travel Plan</h1>
             <Accordion defaultValue="Apples">
-              {
-                data.map((item, key) => (
-                  <Accordion.Item key={key} value={'item.Day'}>
-                    <Accordion.Control>Day {item.Day}</Accordion.Control>
-                    <Accordion.Panel>
-                      <div>
+              {data.map((item, key) => (
+                <Accordion.Item key={key} value={"item.Day"}>
+                  <Accordion.Control>Day {item.Day}</Accordion.Control>
+                  <Accordion.Panel>
+                    <div>
                       {item.Locations.map((location, index) => (
                         <div key={index}>
                           <h3>{location.Title}</h3>
                           <small>{location.Category}</small>
+                          <Carousel withIndicators height={400}>
+                            <Carousel.Slide>
+                              <img src={location.img1} alt="bg" />
+                            </Carousel.Slide>
+                            <Carousel.Slide>
+                              <img src={location.img2} alt="bg" />
+                            </Carousel.Slide>
+                            <Carousel.Slide>
+                              <img src={location.img3} alt="bg" />
+                            </Carousel.Slide>
+                          </Carousel>
+                          <p>{location.Description}</p>
                         </div>
                       ))}
-                      </div>
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                ))
-              }
+                    </div>
+                  </Accordion.Panel>
+                </Accordion.Item>
+              ))}
             </Accordion>
           </div>
           <br />
           <div className="stay">
             <h1>Stay</h1>
             <div className="stay-content">
-              <Cards location={result.destination}/>
+              <Cards location={result.destination} />
             </div>
           </div>
           <br />

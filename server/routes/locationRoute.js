@@ -15,7 +15,7 @@ router.post('/api/location/', (req, res) => {
     // collect data from script
     python.stdout.on('data', function (data) {
         console.log('Pipe data from python script ...');
-        dataToSend = JSON.parse(data.toString());
+        dataToSend = JSON.parse(data);
     });
     // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
