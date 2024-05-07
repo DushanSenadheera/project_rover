@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    ports:
+      - 8000:8000
+    networks:
+      - mynetwork
+
+  client:
+    build: ./client
+    ports:
+      - 3000:3000
+    networks:
+      - mynetwork
+    depends_on:
+      - server
+
+networks:
+  mynetwork:
+    driver: bridge

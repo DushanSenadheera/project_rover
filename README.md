@@ -17,7 +17,7 @@ Navigate to the project directory
 ```bash
 cd project_rover
 ```
-Install the dependencies
+Install the server & client dependencies in relevent directories
 ```bash
 npm install
 ```
