@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <h3 className="sub-heading">What is ROVER?</h3>
       <Fade direction="up">
       <p>

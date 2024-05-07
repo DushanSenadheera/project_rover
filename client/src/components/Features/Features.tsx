@@ -16,7 +16,7 @@ const features = [
   },
   {
     icon: IconCircleDotted,
-    title: 'Opensource',
+    title: 'Budget-friendly',
     description:
       'With new :focus-visible selector focus ring will appear only when user navigates with keyboard',
   },
@@ -58,7 +58,7 @@ export function Features() {
             A fully featured travel recommendation engine for your next project
           </Title>
           <Text c="dimmed">
-            Build fully functional travel and tourism web applications using ROVER API easily and enhance user experience
+            Build fully functional travel applications using ROVER API easily and enhance user experience
           </Text>
 
           <Button
