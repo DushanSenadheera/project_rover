@@ -17,6 +17,10 @@ app.use('/', foodRoute)
 app.use('/', stayRoute)
 app.use('/', locationRoute)
 
+app.get('/', (req, res) => {
+    res.send('Welcome to Rover API')
+})
+
 app.listen(process.env.PORT, () => {
     console.log(`server is listening on port ${process.env.PORT}!`)
 })
