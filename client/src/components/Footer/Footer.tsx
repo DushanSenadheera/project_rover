@@ -55,7 +55,7 @@ export function Footer() {
           <Text size="lg" c='white' className={classes.description}>
             R O V E R
           </Text>
-          <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem tempore dolor aspernatur minus ipsa?</small>
+          <small>Build fully functional travel applications using ROVER API easily and enhance user experience</small>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>

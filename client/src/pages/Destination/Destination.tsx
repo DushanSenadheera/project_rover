@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { TextInput } from "@mantine/core";
 import bg from "../../assets/bg.png";
 import UserInputLayout from "../../layouts/userInputLayout/UserInputLayout";
+import { useForm, isNotEmpty, isEmail, isInRange, hasLength, matches } from '@mantine/form';
 
 export default function Destination() {
 
@@ -12,11 +13,23 @@ export default function Destination() {
     setDestination(e.target.value);
   }
 
+  const form = useForm({
+    mode: 'uncontrolled',
+    initialValues: {
+      name: '',
+    },
+
+    validate: {
+      name: hasLength({ min: 2, max: 10 }, 'Name must be 2-10 characters long'),
+    },
+  });
+
   return (
     <UserInputLayout bg={bg}>
       <form>
         <h1>Destination</h1>
-        <TextInput onChange={handleData} label="Enter your destination" value={destination} withAsterisk placeholder="City Name" />
+        <TextInput key={form.key('name')}
+        {...form.getInputProps('name')} onChange={handleData} label="Enter your destination" value={destination} withAsterisk placeholder="City Name" />
       </form>
       <Link to={{
         pathname: "/duration",

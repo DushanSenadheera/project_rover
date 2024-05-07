@@ -22,7 +22,7 @@ import {
     ));
   
     return (
-      <div className={classes.wrapper}>
+      <div className={classes.wrapper} id='contact'>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
           <div>
             <Title className={classes.title}>Contact us</Title>
@@ -57,7 +57,7 @@ import {
             />
   
             <Group justify="flex-end" mt="md">
-              <Button className={classes.control}>Send message</Button>
+              <Button bg={'#1e1e1e'} className={classes.control}>Send message</Button>
             </Group>
           </div>
         </SimpleGrid>

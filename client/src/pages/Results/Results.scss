@@ -1,5 +1,6 @@
 .results-content{
     padding: 6rem;
+    background-color: whitesmoke;
 }
 
 .results-content img{
@@ -10,6 +11,12 @@
 
 .stay-content{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2rem;
+}
+
+.plan-details{
+    //add gap
+    gap: 1rem;
 }

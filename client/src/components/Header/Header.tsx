@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 export function Header() {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id='/'>
       <Overlay color="#000" opacity={0.8} zIndex={1} />
 
       <div className={classes.inner}>
