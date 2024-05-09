@@ -11,6 +11,7 @@ import {
   import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
   import { ContactIconsList } from './ContactIcon';
   import classes from './contact.module.scss';
+  import { Fade } from "react-awesome-reveal";
   
   const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
   
@@ -34,6 +35,7 @@ import {
   
             <Group mt="xl">{icons}</Group>
           </div>
+          <Fade direction="right">
           <div className={classes.form}>
             <TextInput
               label="Email"
@@ -60,6 +62,7 @@ import {
               <Button bg={'#1e1e1e'} className={classes.control}>Send message</Button>
             </Group>
           </div>
+          </Fade>
         </SimpleGrid>
       </div>
     );

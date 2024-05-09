@@ -2,6 +2,8 @@
 
 [![ci](https://github.com/DushanSenadheera/project_rover/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DushanSenadheera/project_rover/actions/workflows/ci.yml)
 
+[![CodeQL](https://github.com/DushanSenadheera/project_rover/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/DushanSenadheera/project_rover/actions/workflows/codeql.yml)
+
 ### Project Rover is a Travel Recommendation Platform powered by Software as a Service recommendation Engine that can use as a contextual recommendation system  
 
 ### Tech Stack:

@@ -44,31 +44,55 @@ export default function Results() {
           <h1>{result.destination}</h1>
           <small>Southern Province, Sri Lanka</small>
           <br />
-          <p>The Southern Province of Sri Lanka is known for its rich cultural heritage and breathtaking natural landscapes. This region, which encompasses the districts of Galle, Matara, and Hambantota, offers a diverse tapestry of attractions ranging from lush green tea estates and pristine beaches to ancient temples and colonial fortresses.
-
-Galle, the provincial capital, is famous for its well-preserved 17th-century Dutch fort, a UNESCO World Heritage Site, which encapsulates the fusion of European architecture and South Asian traditions. Inside the fort's walls, you can find an array of boutique shops, art galleries, and cafes.
-
-Matara is known for its robust fishing industry and vibrant markets. The area's coastline is dotted with idyllic beaches like Polhena and Mirissa, the latter being a popular spot for whale watching. Matara's historical significance is highlighted by the ancient temples and the old Dutch fort that overlooks the ocean.
-
-Hambantota, to the east, has been rapidly developing and is known for its salt pans and wildlife sanctuaries. The Yala National Park, part of which lies within the province, is one of the best places in Asia to see wild elephants, leopards, and a variety of birds.
-
-The Southern Province is also celebrated for its traditional dance forms, such as the devil dance, and its spicy seafood cuisine, which reflects the abundant marine resources of the area. This region offers a compelling blend of natural beauty, history, and culture, making it a must-visit destination in Sri Lanka.</p>
+          <p>
+            The Southern Province of Sri Lanka is known for its rich cultural
+            heritage and breathtaking natural landscapes. This region, which
+            encompasses the districts of Galle, Matara, and Hambantota, offers a
+            diverse tapestry of attractions ranging from lush green tea estates
+            and pristine beaches to ancient temples and colonial fortresses.
+            Galle, the provincial capital, is famous for its well-preserved
+            17th-century Dutch fort, a UNESCO World Heritage Site, which
+            encapsulates the fusion of European architecture and South Asian
+            traditions. Inside the fort's walls, you can find an array of
+            boutique shops, art galleries, and cafes. Matara is known for its
+            robust fishing industry and vibrant markets. The area's coastline is
+            dotted with idyllic beaches like Polhena and Mirissa, the latter
+            being a popular spot for whale watching. Matara's historical
+            significance is highlighted by the ancient temples and the old Dutch
+            fort that overlooks the ocean. Hambantota, to the east, has been
+            rapidly developing and is known for its salt pans and wildlife
+            sanctuaries. The Yala National Park, part of which lies within the
+            province, is one of the best places in Asia to see wild elephants,
+            leopards, and a variety of birds. The Southern Province is also
+            celebrated for its traditional dance forms, such as the devil dance,
+            and its spicy seafood cuisine, which reflects the abundant marine
+            resources of the area. This region offers a compelling blend of
+            natural beauty, history, and culture, making it a must-visit
+            destination in Sri Lanka.
+          </p>
           <div className="plan">
             <br />
             <h1>Travel Plan</h1>
-            <p>May your journey be filled with enchanting sights, delightful discoveries, and moments that take your breath away. Enjoy every step of the way!</p>
+            <p>
+              May your journey be filled with enchanting sights, delightful
+              discoveries, and moments that take your breath away. Enjoy every
+              step of the way!
+            </p>
             <Accordion defaultValue={"Day 1"}>
               {data.map((item, key) => (
                 <Accordion.Item key={key} value={`Day ${item.Day}`}>
-                  <Accordion.Control> <h3>Day {item.Day}</h3> </Accordion.Control>
+                  <Accordion.Control>
+                    {" "} 
+                    <h3>Day {item.Day}</h3>{" "}
+                  </Accordion.Control>
                   <Accordion.Panel>
                     <div className="plan-details">
                       {item.Locations.map((location, index) => (
-                        <div key={index}>
+                        <div key={index} style={{marginTop: '1.5rem'}}>
                           <h3>{location.Title}</h3>
-                          <small>{location.Location}</small>, <small>{location.Category}</small>
-          
-                          <Carousel withIndicators height={400}>
+                          <small>{location.Location}</small>,{" "}
+                          <small>{location.Category}</small>
+                          <Carousel withIndicators height={600}>
                             <Carousel.Slide>
                               <img src={location.img1} alt="bg" />
                             </Carousel.Slide>
@@ -91,7 +115,10 @@ The Southern Province is also celebrated for its traditional dance forms, such a
           <br />
           <div className="stay">
             <h1>Stay</h1>
-            <p>Your accommodations are a sanctuary where comfort and elegance intertwine, offering a haven of tranquility during your travels</p>
+            <p>
+              Your accommodations are a sanctuary where comfort and elegance
+              intertwine, offering a haven of tranquility during your travels
+            </p>
             <div className="stay-content">
               <Cards location={result.destination} />
             </div>
@@ -99,7 +126,11 @@ The Southern Province is also celebrated for its traditional dance forms, such a
           <br />
           <div className="stay">
             <h1>Eat</h1>
-            <p>Indulge in the culinary delights of this enchanting destination, where each meal is a symphony of flavors, a dance of spices, and a celebration of local culture</p>
+            <p>
+              Indulge in the culinary delights of this enchanting destination,
+              where each meal is a symphony of flavors, a dance of spices, and a
+              celebration of local culture
+            </p>
             <div className="stay-content">
               <Eat location={result.destination} />
             </div>

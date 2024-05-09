@@ -4,7 +4,6 @@ import axios from "axios";
 import { Carousel } from "@mantine/carousel";
 import { IconStar } from "@tabler/icons-react";
 import classes from "./Card.module.scss";
-import img from "../../../../model/data/assets/pool-area.jpg";
 
 export default function Cards(props) {
   const [data, setData] = useState([]);
@@ -37,13 +36,13 @@ export default function Cards(props) {
           }}
         >
           <Carousel.Slide>
-            <Image src={img} height={220} />
+            <Image src={item.img1} height={220} />
           </Carousel.Slide>
           <Carousel.Slide>
-            <Image src={img} height={220} />
+            <Image src={item.img2} height={220} />
           </Carousel.Slide>
           <Carousel.Slide>
-            <Image src={img} height={220} />
+            <Image src={item.img3} height={220} />
           </Carousel.Slide>
         </Carousel>
       </Card.Section>
