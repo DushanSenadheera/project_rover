@@ -36,13 +36,13 @@ export default function Eat(props) {
           }}
         >
           <Carousel.Slide>
-            <Image src={img} height={220} />
+            <Image src={item.img1} height={220} />
           </Carousel.Slide>
           <Carousel.Slide>
-            <Image src={img} height={220} />
+            <Image src={item.img2} height={220} />
           </Carousel.Slide>
           <Carousel.Slide>
-            <Image src={img} height={220} />
+            <Image src={item.img3} height={220} />
           </Carousel.Slide>
         </Carousel>
       </Card.Section>
@@ -67,7 +67,9 @@ export default function Eat(props) {
       <Group justify="space-between" mt="md">
         <div>
           <Text fz="xl" span fw={500} className={classes.price}>
-            {item.Budget}
+            {
+              item.Budget === "low" ? "$" : item.Budget === "medium" ? "$$" : "$$$"
+            }
           </Text>
         </div>
       </Group>
