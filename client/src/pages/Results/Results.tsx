@@ -56,6 +56,7 @@ The Southern Province is also celebrated for its traditional dance forms, such a
           <div className="plan">
             <br />
             <h1>Travel Plan</h1>
+            <p>May your journey be filled with enchanting sights, delightful discoveries, and moments that take your breath away. Enjoy every step of the way!</p>
             <Accordion defaultValue={"Day 1"}>
               {data.map((item, key) => (
                 <Accordion.Item key={key} value={`Day ${item.Day}`}>
@@ -90,6 +91,7 @@ The Southern Province is also celebrated for its traditional dance forms, such a
           <br />
           <div className="stay">
             <h1>Stay</h1>
+            <p>Your accommodations are a sanctuary where comfort and elegance intertwine, offering a haven of tranquility during your travels</p>
             <div className="stay-content">
               <Cards location={result.destination} />
             </div>
@@ -97,6 +99,7 @@ The Southern Province is also celebrated for its traditional dance forms, such a
           <br />
           <div className="stay">
             <h1>Eat</h1>
+            <p>Indulge in the culinary delights of this enchanting destination, where each meal is a symphony of flavors, a dance of spices, and a celebration of local culture</p>
             <div className="stay-content">
               <Eat location={result.destination} />
             </div>
