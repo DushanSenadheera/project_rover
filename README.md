@@ -1,4 +1,4 @@
-# Project ROVER - Travel Recommendation Platform
+# Project ROVER - SaaS Travel Recommendation Platform
 
 [![ci](https://github.com/DushanSenadheera/project_rover/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DushanSenadheera/project_rover/actions/workflows/ci.yml)
 
@@ -21,7 +21,7 @@ Install the server & client dependencies in relevent directories
 ```bash
 npm install
 ```
-Run the application
+Run the application locally
 ```bash
 ./localhost.sh
 ```

@@ -39,7 +39,7 @@ export function Navbar() {
         <h1 className={classes.logo}>R O V E R</h1>
         <Group gap={5} visibleFrom="xs">
           {items}
-          <Button variant="filled" color="var(--primary-color)" size="sm" radius="lg">Documentation</Button>
+          <a  target='_blank' href="https://documenter.getpostman.com/view/28662859/2sA3BoaBaB#intro"><Button variant="filled" color="var(--primary-color)" size="sm" radius="lg">Documentation</Button></a>
         </Group>
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
