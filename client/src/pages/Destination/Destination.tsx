@@ -20,13 +20,13 @@ export default function Destination() {
     },
 
     validate: {
-      name: hasLength({ min: 2, max: 10 }, 'Name must be 2-10 characters long'),
+      name: isNotEmpty('Name cannot be empty')
     },
   });
 
   return (
     <UserInputLayout bg={bg}>
-      <form>
+      <form onSubmit={form.onSubmit(() => {})}>
         <h1>Destination</h1>
         <TextInput key={form.key('name')}
         {...form.getInputProps('name')} onChange={handleData} label="Enter your destination" value={destination} withAsterisk placeholder="City Name" />
