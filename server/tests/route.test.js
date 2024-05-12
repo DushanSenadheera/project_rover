@@ -1,49 +1,48 @@
 const request = require('supertest');
-const app = require('../index');
-const stayRoute = require('../routes/stayRoute');
+const location = require('../routes/locationRoute');
+const food = require('../routes/foodRoute');
+const stay = require('../routes/stayRoute');
 
-describe('Test the root path', () => {
-  test('It should response the GET method', () => {
-    return request(app).get('/').then(response => {
-      expect(response.statusCode).toBe(200);
-    });
-  });
+describe('Test the location route', () => {
+  test('It should respond to the POST method', () => {
+    return request(location)
+      .post('/api/location') // replace with your route
+      .send({
+        location: 'Tangalle',
+        budget: 1000,
+        duration: 3,
+        interests: ['beaches', 'nature & wildlife'],
+      })
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+      });
+  }, 10000);
 });
 
-describe('Test the root path', () => {
-  test('It should response the GET method', () => {
-    return request(app).get('/').then(response => {
-      expect(response.statusCode).toBe(200);
-    });
+
+describe('Test the location route', () => {
+  test('It should respond to the POST method', () => {
+    return request(stay)
+      .post('/api/stay') // replace with your route
+      .send({
+        location: 'Galle'
+      })
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+      });
   });
+}, 10000);
 
-  test('It should response the GET method', () => {
-    return request(app).get('/').then(response => {
-      expect(response.statusCode).toBe(200);
-    });
+
+describe('Test the location route', () => {
+  test('It should respond to the POST method', () => {
+    return request(food)
+      .post('/api/food') // replace with your route
+      .send({
+        location: 'Galle'
+      })
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+      });
   });
-});
-
-describe('Test the root path', () => {
-  test('It should response the GET method', () => {
-    return request(app).get('/').then(response => {
-      expect(response.statusCode).toBe(200);
-    });
-  });
-});
-
-// describe('Test the food path', () => {
-//   test('It should response the POST method', () => {
-//     return request(app).post('api/food').then(response => {
-//       expect(response.statusCode).toBe(200);
-//     });
-//   });
-// });
-
-// describe('Test the stay path', () => {
-//   test('It should response the POST method', () => {
-//     return request(stayRoute).post('api/stay').then(response => {
-//       expect(response.statusCode).toBe(200);
-//     });
-//   });
-// });
+}, 10000);

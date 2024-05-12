@@ -7,6 +7,7 @@ const cors = require('cors');
 const foodRoute = require('./routes/foodRoute.js');
 const stayRoute = require('./routes/stayRoute.js');
 const locationRoute = require('./routes/locationRoute.js');
+const { spawn } = require('child_process');
 
 app.use(cors({origin: '*',}));
 app.use(bodyParser.urlencoded({ extended: true }));
