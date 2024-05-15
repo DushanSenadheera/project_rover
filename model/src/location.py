@@ -5,16 +5,16 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from math import radians, cos, sin, asin, sqrt
 
-# Assuming df is DataFrame and it has been defined and loaded with data
+# load dataset
 df = pd.read_csv('../model/data/southern.csv')
 
-# Combine the 'Location', 'Category', 'Budget', and 'Duration' columns into a single 'Features' column
+# Combine to feature column
 df['Features'] = df['Location'] + ' ' + df['Category'] + ' ' + df['Budget'].astype(str) + ' ' + df['Duration'].astype(str)
 
 tfidf = TfidfVectorizer(stop_words='english')
 tfidf_matrix = tfidf.fit_transform(df['Features'])
 
-# Function to calculate the distance between two points using their coordinates
+# calculate the distance between two points using their coordinates
 def haversine(lon1, lat1, lon2, lat2):
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
     dlon = lon2 - lon1
@@ -33,7 +33,7 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
     user_df['Features'] = user_df['Location'] + ' ' + user_df['Category'] + ' ' + user_df['Budget'].astype(str) + ' ' + user_df['Duration'].astype(str)
     user_tfidf = tfidf.transform(user_df['Features'])
 
-    # Calculate the cosine similarity between the user's input and the locations in the dataframe
+    # Calculate the cosine similarity 
     cosine_sim_user = linear_kernel(user_tfidf, tfidf_matrix)
 
     # Get the most similar locations
@@ -88,11 +88,11 @@ def recommend_locations(user_input_location, user_input_categories, user_input_b
 
 # Get user input
 user_input_location = sys.argv[1]
-user_input_category =  sys.argv[4] # List of categories
-user_input_budget = int(sys.argv[2])  # Budget in dollars
-user_input_days = int(sys.argv[3]) # Number of days
+user_input_category =  sys.argv[4] 
+user_input_budget = int(sys.argv[2])  
+user_input_days = int(sys.argv[3]) 
 
-# Recommend locations based on the user's input
+
 recommendations = recommend_locations(user_input_location, user_input_category, user_input_budget, user_input_days)
 
 recommendations_list = []
@@ -102,7 +102,6 @@ for i, day in enumerate(recommendations):
         "Locations": day.to_dict('records'),
         })
 
-# Print the list as a JSON array
 print(json.dumps(recommendations_list,))
 
 

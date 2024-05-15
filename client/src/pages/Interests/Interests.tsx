@@ -28,7 +28,7 @@ export default function Interests() {
           <p>Select your interests</p>
           <br />
           <div className="chips">
-            <Chip onClick={() => handleChipClick("Religous Places")} color="black">Religous Places</Chip>
+            <Chip onClick={() => handleChipClick("religous")} color="black">Religous</Chip>
             <Chip onClick={() => handleChipClick("point of interests")} color="black">Point of interests</Chip>
             <Chip onClick={() => handleChipClick("Historical")} color="black">Historical</Chip>
             <Chip onClick={() => handleChipClick("Hidden Gems")} color="black">Hidden Gems</Chip>
