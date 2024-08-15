@@ -8,7 +8,7 @@ router.post('/api/food/', (req, res) => {
 
     let dataToSend;
     // spawn new child process to call the python script
-    const python = spawn('python', ['../model/src/eat.py', location]);
+    const python = spawn('python3', ['../model/src/eat.py', location]);
     // collect data from script
     python.stdout.on('data', function (data) {
         console.log('Pipe data from python script ...');
